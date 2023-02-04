@@ -1,0 +1,22 @@
+{
+  "name": "team-profile-generator-1.0",
+  "version": "1.0.0",
+  "description": "a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bmoore4452/Team-Profile-Generator-1.0.git"
+  },
+  "author": "Brian Moore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bmoore4452/Team-Profile-Generator-1.0/issues"
+  },
+  "homepage": "https://github.com/Bmoore4452/Team-Profile-Generator-1.0#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
