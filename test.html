@@ -1,8 +1,4 @@
-const inquirer = require("inquirer");
-const fs = require("fs");
-
-const generateHtml = ({ manName, employeeId, emailOne, officeNumber }) =>
-  `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,8 +15,8 @@ const generateHtml = ({ manName, employeeId, emailOne, officeNumber }) =>
     <div class="container d-grid m-auto w-100 p-3">
         <div class="d-flex m-auto gap-5">
             <div class="card border-danger border-3 mb-3" style="max-width: 18rem;">
-                <div class="text-start m-auto">${manName}</div>
-                <div class="text-start m-auto">Manager</div>
+                <div class="text-start m-auto">Header</div>
+                <div class="text-start m-auto">Header</div>
                 <div class="card-body bg-dark text-danger">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">An item</li>
@@ -81,20 +77,4 @@ const generateHtml = ({ manName, employeeId, emailOne, officeNumber }) =>
     </div>
 </body>
 
-</html>`;
-
-inquirer
-  .prompt([
-    {
-      type: "input",
-      name: "manName",
-      message: "What is the team manager's name?",
-    },
-  ])
-  .then((answers) => {
-    const htmlPageContent = generateHtml(answers);
-
-    fs.writeFile("index.html", htmlPageContent, (err) =>
-      err ? console.log(err) : console.log("Successfully created index.html!")
-    );
-  });
+</html>
