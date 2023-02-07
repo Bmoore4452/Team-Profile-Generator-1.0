@@ -23,9 +23,9 @@ const generateHtml = ({ manName, employeeId, emailOne, officeNumber }) =>
                 <div class="text-start m-auto">Manager</div>
                 <div class="card-body bg-dark text-danger">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">ID:${employeeId}</li>
+                        <li class="list-group-item">Email:<a href="mailto:${emailOne}">${emailOne}</a></li>
+                        <li class="list-group-item">Office number:${officeNumber}</li>
                     </ul>
                 </div>
             </div>
@@ -90,11 +90,33 @@ inquirer
       name: "manName",
       message: "What is the team manager's name?",
     },
+    {
+      type: "input",
+      name: "employeeId",
+      message: "What is your ID number?",
+    },
+    {
+      type: "input",
+      name: "emailOne",
+      message: "What is your email address?",
+    },
+    {
+      type: "input",
+      name: "officeNumber",
+      message: "What is your office number?",
+    },
+    {
+      type: "list",
+      name: "teamList",
+      message: "Select the members of your team:",
+      choices: ["Engineer","Intern"],
+      
+    },
   ])
   .then((answers) => {
     const htmlPageContent = generateHtml(answers);
 
-    fs.writeFile("index.html", htmlPageContent, (err) =>
+    fs.writeFile("./dist/index.html", htmlPageContent, (err) =>
       err ? console.log(err) : console.log("Successfully created index.html!")
     );
   });

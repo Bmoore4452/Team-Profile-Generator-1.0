@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Bmoore4452/Team-Profile-Generator-1.0#readme",
   "dependencies": {
     "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.4.1"
   }
 }
